@@ -1,0 +1,74 @@
+<mat-card class="hrs-employee-detail">
+  <mat-card-header>Edit employee</mat-card-header>
+  <mat-card-content>
+    
+    <form #employeeForm="ngForm" (ngSubmit)="saveOrUpdate()" (change)="formChanged()">
+      <p>
+        <mat-input-container>
+          <input matInput 
+            type="text" 
+            name="name" 
+            placeholder="Name" 
+            [(ngModel)]="employee.name"
+            #name="ngModel"
+            required>
+        </mat-input-container>
+        <span [hidden]="name.valid || name.pristine" class="alert">
+          Name is required
+        </span>
+      </p>
+      <p>
+        <mat-input-container>
+          <input matInput
+            type="text"
+            name="surname"
+            placeholder="Surname"
+            [(ngModel)]="employee.surname"
+            required
+            pattern=".{3,20}"
+            #surname="ngModel">
+        </mat-input-container>
+        <span [hidden]="surname.valid || surname.pristine">
+          <span [hidden]="!surname?.errors?.required" class="alert">
+            Surname is required
+          </span>
+          <span [hidden]="!surname?.errors?.pattern" class="alert">
+            Surname length should be between 3 and 20
+          </span>
+        </span>
+      </p>
+      <p>
+        <mat-input-container>
+          <input matInput
+            type="text"
+            size="50"
+            name="address"
+            placeholder="Adress"
+            [(ngModel)]="employee.address">
+        </mat-input-container>
+      </p>
+      <p>
+        <mat-input-container>
+          <input matInput
+            type="number"
+            name="salary"
+            placeholder="Salary"
+            [(ngModel)]="employee.salary">
+        </mat-input-container>
+      </p>
+      <p class="buttons">
+        <button mat-raised-button 
+          color="primary" 
+          type="submit"
+          [disabled]="!employeeForm.valid">Save</button>
+      </p>
+      <p class="buttons">
+        <button mat-raised-button 
+          color="primary"
+          (click)="setNotEdited()"
+          [disabled]="!isEdited()">Cancel</button>
+      </p>
+    </form>
+
+  </mat-card-content>
+</mat-card>

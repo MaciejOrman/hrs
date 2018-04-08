@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Adam",
+        "surname": "Bosworth",
+        "address": "Google palace",
+        "salary": 18000
+    },
+    {
+        "id": 2,
+        "name": "Al",
+        "surname": "Gore",
+        "address": "Google castle",
+        "salary": 155000
+    },
+    {
+        "id": 3,
+        "name": "Alan",
+        "surname": "Eustace",
+        "address": "Google kingdom",
+        "salary": 120000
+    }
+]

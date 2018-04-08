@@ -1,0 +1,16 @@
+.hrs-employee-detail {
+    margin: 25px;
+}
+
+p.buttons {
+    text-align: right;
+}
+
+.alert {
+    margin-left: 10px;
+    color: red;
+}
+
+>>> .mat-card-header-text {
+    margin: 0 !important;
+}

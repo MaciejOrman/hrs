@@ -1,0 +1,41 @@
+.employee {
+    height: 300px;
+    display: block;
+    margin: auto;
+}
+
+.card {
+  width: 300px;
+  margin: 20px auto;
+}
+
+.button {
+    display: block;
+    margin: 20px auto;
+    width: 120px;
+}
+
+mat-checkbox {
+    display: block;
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+    font-size: 16px;
+}
+
+.col {
+    float: left;
+    width: 50%;
+}
+
+.credit {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+}

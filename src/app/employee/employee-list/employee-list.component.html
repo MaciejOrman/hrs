@@ -1,0 +1,9 @@
+<mat-nav-list>
+    <mat-list-item 
+        *ngFor="let employee of employees">
+        <div (click)="selectEmployee(employee.id)" class="full-length">
+            {{employee.name}} {{employee.surname}}
+        </div>
+        <mat-icon (click)="deleteEmployee(employee.id)">delete</mat-icon>
+    </mat-list-item>
+</mat-nav-list>

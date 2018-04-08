@@ -1,0 +1,27 @@
+mat-sidenav {
+    width: 300px;
+}
+
+mat-sidenav-container {
+    margin-top: 64px;
+}
+
+@media (max-width: 600px) {
+    mat-sidenav-container {
+        margin-top: 56px;
+    }
+}
+
+>>> .mat-sidenav-content {
+    transform: none !important;
+}
+
+button {
+    min-width: 46px !important;
+}
+
+.add-fab {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}

@@ -1,0 +1,30 @@
+<mat-sidenav-container fullscreen>
+  
+  <mat-sidenav #sidenav mode="{{navMode}}" opened="{{navOpened}}">
+    <mat-toolbar color="accent">Employee list</mat-toolbar>
+    <hrs-employee-search [searchValue]="searchValue"></hrs-employee-search>
+    <hrs-employee-list 
+      [employees]="employees"
+      (employeeSelected)="selectEmployee($event)"
+      (employeeDeleted)="deleteEmployee($event)">
+    </hrs-employee-list>
+  </mat-sidenav>
+
+  <mat-toolbar color="accent" *ngIf="navMode == 'over'">
+    <button mat-button (click)="sidenav.open()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+  
+  <hrs-employee-detail 
+      #details
+      [employee]="selectedEmployee" 
+      (employeeSaved)="saveEmployee($event)"
+      (employeeUpdated)="updateEmployee($event)">
+  </hrs-employee-detail>
+
+  <button mat-fab class="add-fab" [routerLink]="['/employees/new']">
+    <mat-icon>add</mat-icon>
+  </button>
+
+</mat-sidenav-container>

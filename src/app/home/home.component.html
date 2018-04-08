@@ -1,0 +1,17 @@
+<mat-card class="card">
+  <mat-card-content>
+    <p class="description">
+      Demo Angular 2+ Application for Managing Employees
+    </p>
+    <img class="employee" src="assets/employee.jpg">
+    <div class="col">
+      <button mat-raised-button color="primary" class="button" [routerLink]="['/employees/new']">Employees</button>
+    </div>
+    <div class="col">
+      <button mat-raised-button color="warn" class="button" [routerLink]="['/admin']">Admin</button>
+    </div>
+    <mat-checkbox color="primary" [checked]='isLogged()' (change)='handleChange($event)'>Logged in</mat-checkbox>
+  </mat-card-content>
+</mat-card>
+
+<a class="credit" href="http://www.freepik.com/free-photos-vectors/business">Business vector created by Alekksall - Freepik.com</a>
